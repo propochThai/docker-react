@@ -7,3 +7,15 @@ before_install:
 
 script:
     - docker run -e CI=true propochthai/docker-react npm run test -- --coverage
+
+deploy:
+    provider: elasticbeanstalk
+    region: "ap-southeast-1"
+    app: "docker-react"
+    env: "DockerReact-env"
+    bucket_name: "elasticbeanstalk-ap-southeast-1-777393374741"
+    bucket_path: "docker-react"
+    on:
+        branch: master
+    access_key_id: $access_key_id
+    secret_access_key: $secret_access_key
