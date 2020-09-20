@@ -16,8 +16,11 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Change from fetaure branch
+          Learn React
         </a>
+        <b>
+          add more
+        </b>
       </header>
     </div>
   );
