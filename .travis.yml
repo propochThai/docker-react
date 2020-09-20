@@ -1,0 +1,9 @@
+sudo: required 
+services:
+    - docker 
+
+before_install:
+    - docker build -t propochthai/docker-react -f Dockerfile.dev . 
+
+script:
+    - docker run -e CI=true propochthai/docker-react npm run test -- --coverage
