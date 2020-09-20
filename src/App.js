@@ -19,7 +19,7 @@ function App() {
           Learn React
         </a>
         <b>
-          add more
+          add more2
         </b>
       </header>
     </div>
